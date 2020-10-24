@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste vehicule{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>voici la {{voiture.modele.libelle}}</h1>
+<div class="row no-gutters ">
+
+<div class="col-12 col-lg-6 p1">
+    <div class="card" style="width: 18rem;">
+  <img src="{{asset('images/' ~ voiture.modele.image )}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{voiture.modele.libelle}}</h5>
+    <p class="card-text"></p>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{voiture.modele.marque.libelle}}</li>
+
+    <li class="list-group-item">{{voiture.immatriculation}}</li>
+    <li class="list-group-item">{{voiture.nbPortes}}</li>
+    <li class="list-group-item">{{voiture.annee}}</li>
+  </ul>
+  
+</div>
+</div>
+</div>
+{% endblock %}
